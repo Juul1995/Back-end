@@ -9,22 +9,25 @@ player_1 = 'Marco van Basten'
 goal_0 = 32
 goal_1 = 54 
 
-scorers = player_0 +" "+ str(goal_0) + ', ' +player_1 +" "+ str(goal_1)
-report = f"{player_0} scored in the {goal_0}nd minute \n{player_1} scored in the {goal_1}th minute"
+scorers = player_0 +" "+ str(goal_0) + ', ' + player_1 +" "+ str(goal_1) # no need for the space in front of /n 
+report = f"{player_0} scored in the {goal_0}nd minute\n{player_1} scored in the {goal_1}th minute"
 
 player = 'Wim Kieft'
 first_name = player[:player.find(" ")]
 last_name = player[player.rfind(" ") + 1:]
-last_name_len = len(player[player.rfind(" ") + 1:])
-name_short = first_name[0] + '.'+ " " + last_name
-chant = (first_name +'! ')*len(first_name) 
-good_chant = chant[0] != " " 
+last_name_len = len(player[player.find(" ") + 1:])
+name_short = first_name[0] + '. ' + last_name
+
+chant_name = first_name +'!'
+print (chant_name)
+chant = chant_name + " " +  chant_name + " " +  chant_name #get rid of the space after Wim! 
+
+good_chant = chant[-1] != " "
 
 print(scorers)
 print(report)
-print (name_short)
-print (chant)
-print (good_chant)
+print(chant)
+print(good_chant)
 
 
 
