@@ -14,14 +14,14 @@ report = f"{player_0} scored in the {goal_0}nd minute\n{player_1} scored in the 
 
 player = 'Wim Kieft'
 first_name = player[:player.find(" ")]
-last_name = player[player.rfind(" ") + 1:]
-last_name_len = len(player[player.find(" ") + 1:])
+last_name = player[player.find(" ") + 1:]
+last_name_len = len(last_name)
 name_short = first_name[0] + '. ' + last_name
 
-chant_name = first_name +'!'
+chant_name = first_name +'! '
 print (chant_name)
-chant = chant_name + " " +  chant_name + " " +  chant_name #get rid of the space after Wim! 
-
+chant_format = chant_name * len(first_name)
+chant = chant_format[:-1]
 good_chant = chant[-1] != " "
 
 print(scorers)
